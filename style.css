@@ -1,0 +1,247 @@
+/* 
+    fonts:
+font-family: 'Inter', sans-serif;
+    400 and 700
+font-family: 'Noto Serif JP', serif;
+    400   
+*/
+
+
+/* RESETS & VAR */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --orange: #FF6F0F;
+    --lt-orange: #FF9147;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter', Helvetica, sans-serif;
+    text-transform: lowercase;
+}
+
+.content-wrap {
+    max-width: 100%;
+}
+
+/* HEADER & NAV */
+
+header {
+    display: flex;
+    margin: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+
+.logo a {
+    color: #000;
+}
+
+header h2 {
+    font-family: 'Noto Serif JP', Georgia, serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+nav li {
+    margin-left: 40px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .dropdown {
+    cursor: pointer;
+}
+
+/* left position hides dropdown menu in default state */
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -999em;
+    background-color: #fff;
+}
+
+/* makes dropdown menu appear when "about me" hovered */
+nav .dropdown:hover .dropdown-list {
+    left: auto;
+    padding: 0 15px 15px 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+}
+
+.dropdown-list li {
+    padding-top: 8px;
+    margin: 0 auto;
+}
+
+/* MAIN - PROJECT CARDS */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-title, .card-desc {
+    opacity: 0;
+}
+
+.card:hover .card-title {
+    opacity: 100%;
+}
+
+.card:hover .card-desc {
+    opacity: 100%;
+}
+
+.card:hover {
+    background-image: none;
+    background-color: var(--lt-orange);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    margin: 0 auto;
+    text-align: center;
+    padding: 110px 20px;
+    color: #fff;
+    width: 100%;
+    transition: background-color 1500ms, opacity 1500ms;
+}
+
+.card h2 {
+    text-transform: uppercase;
+}
+
+.card p {
+    font-family: 'Noto Serif JP', Georgia, serif;
+}
+
+.card1 {
+    background-image: url(../images/pflag.jpg);
+    background-size: cover;
+}
+
+.card2 {
+    background-image: url(../images/viciouscycles.jpg);
+    background-size: cover;
+}
+
+.card3 {
+    background-image: url(../images/serviceexchange.jpg);
+    background-size: cover;
+}
+
+.card4 {
+    background-image: url(../images/weddings.jpg);
+    background-size: cover;
+}
+
+.card5 {
+    background-image: url(../images/liveevent.jpg);
+    background-size: cover;
+}
+
+.card6 {
+    background-image: url(../images/product.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* FOOTER */
+
+footer {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    color: #000;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 850px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin: 10px auto;
+    }
+
+    nav li {
+        margin-right: 35px;
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        background-image: none;
+        background-color: var(--lt-orange);
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        color: #fff;
+        opacity: 100%;
+    }
+
+    .card-desc {
+        color: #fff;
+        opacity: 100%;
+    }
+}
