@@ -16,15 +16,15 @@
   <body>
     <div class="content-wrap">
       <header>
-        <div class="logo">
-
-          <a href="index.html">
+        <div>
+          <!-- page logo -->
+          <a href="index.html"  class="logo">
             <h1>Isaac Odrosky</h1>
             <h2>Web Developer & Photographer</h2>
           </a>
-
         </div>
 
+        <!-- desktop nav -->
         <nav>
           <ul>
             <li><a href="about.html">About</a></li>
@@ -38,47 +38,66 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+
+        <!-- mobile nav (hamburger menu) -->
+        <div class="hamburger">
+          <input type="checkbox" />
+          <!-- spans that act as hamburger icon -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <!-- mobile nav links -->
+          <ul class="hamburger-nav">
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="web.html"><li>Web Design</li></a>
+            <a href="photo.html"><li>Photography</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>
       </header>
+      <!-- begin main page content -->
       <main>
         <section class="grid-container">
           <a href="web.html/#pflag">
-              <div class="card card1">
-                <h2 class="card-title">Salisbury-Rowan PFLAG</h2>
-                <p class="card-desc">Web Development | June 2022</p>
-              </div>
+            <div class="card card1">
+              <h2 class="card-title">Salisbury-Rowan PFLAG</h2>
+              <p class="card-desc">Web Development | June 2022</p>
+            </div>
           </a>
           <a href="web.html/#vc">
-              <div class="card card2">
-                <h2 class="card-title">Vicious Cycles</h2>
-                <p class="card-desc">Web Development | July 2022</p>
-              </div>
+            <div class="card card2">
+              <h2 class="card-title">Vicious Cycles</h2>
+              <p class="card-desc">Web Development | July 2022</p>
+            </div>
           </a>
           <a href="web.html/#service">
-              <div class="card card3">
-                <h2 class="card-title">Service Exchange Event</h2>
-                <p class="card-desc">Web Development | July 2022</p>
-              </div>
+            <div class="card card3">
+              <h2 class="card-title">Service Exchange Event</h2>
+              <p class="card-desc">Web Development | July 2022</p>
+            </div>
           </a>
           <a href="photo.html/#weddings">
-              <div class="card card4">
-                <h2 class="card-title">Weddings</h2>
-                <p class="card-desc">Photography | 2020 &#8209; 2021</p>
-              </div>
+            <div class="card card4">
+              <h2 class="card-title">Weddings</h2>
+              <p class="card-desc">Photography | 2020 &#8209; 2021</p>
+            </div>
           </a>
           <a href="photo.html/#event">
-              <div class="card card5">
-                <h2 class="card-title">Live Events</h2>
-                <p class="card-desc">Photography | 2015 &#8209; 2019</p>
-              </div>
+            <div class="card card5">
+              <h2 class="card-title">Live Events</h2>
+              <p class="card-desc">Photography | 2015 &#8209; 2019</p>
+            </div>
           </a>
           <a href="photo.html/#product">
-              <div class="card card6">
-                <h2 class="card-title">Product</h2>
-                <p class="card-desc">Photography | 2017 &#8209; 2018</p>
-              </div>
+            <div class="card card6">
+              <h2 class="card-title">Product</h2>
+              <p class="card-desc">Photography | 2017 &#8209; 2018</p>
+            </div>
           </a>
         </section>
       </main>
+      <!-- footer (links to socials, contact) -->
       <footer>
         <ul>
           <li>
@@ -89,7 +108,7 @@
             GitHub
           </li>
           <li>
-            <a href="mailto:sodrosky@my.waketech.edu">Contact me</a> via email
+            <a href="/contact.html">Contact me</a>
           </li>
         </ul>
       </footer>
