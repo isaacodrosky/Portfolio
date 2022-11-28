@@ -16,11 +16,15 @@
   <body>
     <div class="content-wrap">
       <header>
-        <a href="index.html" class="logo">
-          <h1>Isaac Odrosky</h1>
-          <h2>Web Developer & Photographer</h2>
-        </a>
+        <div class="logo-container">
+          <!-- page logo -->
+          <a href="index.html"  class="logo">
+            <h1>Isaac Odrosky</h1>
+            <h2>Web Developer & Photographer</h2>
+          </a>
+        </div>
 
+        <!-- desktop nav -->
         <nav>
           <ul>
             <li><a href="about.html">About</a></li>
@@ -34,10 +38,41 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+
+        <!-- mobile nav (hamburger menu) -->
+        <div class="hamburger">
+          <input type="checkbox" />
+          <!-- spans that act as hamburger icon -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <!-- mobile nav links -->
+          <ul class="hamburger-nav">
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="web.html"><li>Web Design</li></a>
+            <a href="photo.html"><li>Photography</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>
       </header>
-      <main>
-    
+      <!-- begin main page content -->
+      <main class="page-container">
+        <img src="images/isaac.jpg" alt="" class="about-img">
+
+        <h2>About Isaac</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia similique quae adipisci optio blanditiis quibusdam doloremque recusandae quasi laboriosam officiis earum saepe totam, ipsam dignissimos quas qui tempore! Fugit illum molestiae, officia nostrum, earum at quo voluptatum facere sequi voluptate deserunt quam maiores consequatur nobis nisi consectetur quae rem. Accusamus amet quod corporis, quam mollitia alias architecto obcaecati id laudantium repudiandae explicabo soluta facere pariatur at veritatis recusandae deleniti nemo dicta accusantium quidem, sit, minima voluptatum earum quo. A tempora alias ea aspernatur unde dolore!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error consectetur quibusdam fugiat est necessitatibus molestias repudiandae aspernatur velit in.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, reiciendis delectus. Placeat sunt iste, at hic quisquam quo dolorum ipsa? Vero voluptatem placeat, ad consequuntur culpa autem quisquam.</p>
+        <div class="btn-container">
+          <a href="web.html" class="btn">Web projects</a>
+          <a href="photo.html" class="btn">Photo projects</a>
+        </div>
+
       </main>
+      <!-- footer (links to socials, contact) -->
       <footer>
         <ul>
           <li>
@@ -48,7 +83,7 @@
             GitHub
           </li>
           <li>
-            <a href="mailto:sodrosky@my.waketech.edu">Contact me</a> via email
+            <a href="/contact.html">Contact me</a>
           </li>
         </ul>
       </footer>
