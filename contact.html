@@ -11,14 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Serif+JP&display=swap"
       rel="stylesheet"
     />
-    <title>Isaac Odrosky | Portfolio</title>
+    <title>Isaac Odrosky | Photo Projects</title>
   </head>
   <body>
     <div class="content-wrap">
       <header>
         <div>
           <!-- page logo -->
-          <a href="index.html"  class="logo">
+          <a href="index.html" class="logo">
             <h1>Isaac Odrosky</h1>
             <h2>Web Developer & Photographer</h2>
           </a>
@@ -48,26 +48,50 @@
           <span></span>
           <!-- mobile nav links -->
           <ul class="hamburger-nav">
-            <a href="index.html"><li>Home</li></a>
-            <a href="about.html"><li>About</li></a>
-            <a href="web.html"><li>Web Design</li></a>
-            <a href="photo.html"><li>Photography</li></a>
-            <a href="contact.html"><li>Contact</li></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="web.html">Web Design</a></li>
+            <li><a href="photo.html">Photography</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </header>
       <!-- begin main page content -->
-      <main>
+      <main class="page-container contact-main">
+        <!-- main page title/desc -->
+        <h2 class="page-title">Get in Touch</h2>
         
+        <!-- contact form -->
+        <form action="#" method="POST"><p class="page-body">Let's talk! You can contact me using the form below or by sending a message on <a href="https://instagram.com/odrosky" target="_blank">Instagram</a>.</p>
+          <label for="name">Name</label>
+          <br>
+          <input type="text" name="name" id="name">
+          <br>
+          <label for="phone">Phone</label>
+          <br>
+          <input type="tel" name="phone" id="phone">
+          <br>
+          <label for="email">Email</label>
+          <br>
+          <input type="email" name="email" id="email">
+          <br>
+          <label for="message">Message</label>
+          <br>
+          <textarea name="message" id="message" cols="500" rows="10"></textarea>
+          <br>
+          <input type="submit" value="Send">
+        </form>
+        <p class="photo-credit">Photo by <a href="https://unsplash.com/@dreamcatchlight?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Diana Light</a> on <a href="https://unsplash.com/s/photos/mail?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+        </p>
       </main>
       <!-- footer (links to socials, contact) -->
       <footer>
         <ul>
           <li>
-            <a href="https://instagram.com/odrosky">@odrosky</a> on Instagram
+            <a href="https://instagram.com/odrosky" target="_blank">@odrosky</a> on Instagram
           </li>
           <li>
-            <a href="https://github.com/isaacodrosky">/isaacodrosky</a> on
+            <a href="https://github.com/isaacodrosky" target="_blank">/isaacodrosky</a> on
             GitHub
           </li>
           <li>
