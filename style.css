@@ -257,7 +257,8 @@ nav .dropdown:hover .dropdown-list {
 }
 
 .btn:hover {
-  transform: scale(105%, 105%);
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* PROJECTS PAGES (web + photo) */
@@ -312,7 +313,88 @@ nav .dropdown:hover .dropdown-list {
 
 .project-link:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  transform: scale(105%, 105%);
+  transform: scale(1.05, 1.05);
+}
+
+/* CONTACT PAGE */
+
+.contact-main {
+  background-image: url(../images/contact.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+
+form {
+  width: 60%;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: rgba(248, 246, 246, 0.5);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
+}
+
+form .page-body {
+  margin-bottom: 25px;
+}
+
+.page-body a:hover {
+  text-decoration: underline;
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-right: 5px;
+}
+
+form label:nth-of-type(4) {
+  padding-right: 0;
+}
+
+form input {
+  border: none;
+  border-bottom: 3px solid #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  background-color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+}
+
+form textarea {
+  width: 100%;
+  border: 3px solid #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+form input[type="submit"] {
+  border: 3px solid var(--orange);
+  background-color: var(--orange);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  width: 100%;
+}
+
+form input[type="submit"]:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.photo-credit {
+  text-align: right;
+  color: #000;
+  padding: 0 10px 10px 0;
+}
+
+.photo-credit a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -326,8 +408,8 @@ footer {
 }
 
 footer ul {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   color: #000;
 }
 
@@ -463,13 +545,34 @@ footer a:hover {
   .project-title h3 {
     font-size: 1.3rem;
   }
+
+  .contact-main {
+    background-image: none;
+  }
+
+  .photo-credit {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+  }
+
+  form textarea {
+    width: 100%;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  footer ul {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 550px) {
-
-  /* -----------------------------
-  need to add fix for footer layout 
-  ----------------------------- */
 
   h1 {
     font-size: 1.5rem;
@@ -512,6 +615,10 @@ footer a:hover {
   .about-img {
     max-width: 40%;
     margin: 0 15px 15px 0;
+  }
+
+  .about-copy {
+    clear: left;
   }
 
   .btn-container a:first-child {
